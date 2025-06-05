@@ -25,6 +25,7 @@ html{
     justify-content: center;
     z-index: 1;
 }
+
 .mensaje {
     position: absolute;
     left: 50%;
@@ -50,7 +51,7 @@ html{
 @keyframes flotarArriba {
     0% {
         opacity: 1;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -500%);
     }
     80% {
         opacity: 1;
@@ -58,6 +59,10 @@ html{
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -140%);
+        transform: translate(-100%, -540%);
     }
 }
+.btn-corazon:hover {
+    background-color: #ff1493;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
