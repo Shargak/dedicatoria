@@ -9,13 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
         "Besitoooos",
         "Muack!!!",
         "Haber quien manda un mensaje de amor tan original ;)"
-       
     ];
     const mensajeDiv = document.getElementById('mensaje');
     const boton = document.querySelector('.btn-corazon');
+    const audio = document.getElementById('audio');
     let indice = 0;
+    let musicaIniciada = false;
 
     boton.addEventListener('click', () => {
+        // Inicia la música solo en el primer clic
+        if (!musicaIniciada) {
+            audio.play();
+            musicaIniciada = true;
+        }
         mensajeDiv.textContent = mensajes[indice];
         mensajeDiv.style.display = "block";
         mensajeDiv.classList.remove('flotar'); // Reinicia animación
