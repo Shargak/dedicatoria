@@ -44,7 +44,7 @@ html{
     padding: 10px 20px;
 }
 .mensaje.flotar {
-    animation: flotarArriba 2s ease-out;
+    animation: flotarArriba 5s ease-out;
 }
 
 @keyframes flotarArriba {
