@@ -1,0 +1,63 @@
+html{
+    background-color: pink;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Añadido para posicionar el mensaje */
+}
+.btn-corazon {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.mensaje {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 2rem;
+    color: #d72660;
+    text-align: center;
+    min-height: 2.5em;
+    transition: background 0.3s, box-shadow 0.3s;
+    pointer-events: none;
+}
+.mensaje.resaltar {
+    background: #fff0f6;
+    box-shadow: 0 0 10px #ff69b4;
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+.mensaje.flotar {
+    animation: flotarArriba 2s ease-out;
+}
+
+@keyframes flotarArriba {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -120%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -140%);
+    }
+}
